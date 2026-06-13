@@ -363,7 +363,7 @@
     loadUsers();
     document.getElementById("userLoginBtn").onclick = showUserModal;
 
-    // ======================= MODÜLLER (12'şer maddeli, sıralama güncellendi) =======================
+    // ======================= MODÜLLER (12'şer maddeli, 7 ve 8. modüller eklendi) =======================
     const defaultModules = {
         "giris": {
             baslik: "🏠 GİRİŞ & KURTULUŞ İLKELERİ",
@@ -389,7 +389,10 @@
             baslik: "📢 5. ORTAK SÖYLEM & SOSYAL MEDYA",
             icerik: `<h1>12 DİJİTAL DİRENİŞ AKSİYONU</h1><ol><li>Vergi takip platforması</li><li>İsrafın ve yolsuzluğun fotoğraflarla ifşası</li><li>Kamusal lüks boykot listeleri</li><li>Evraka dayalı kitlesel yürüyüşler</li><li>Merkezi Dijital Dashboard</li><li>Kısa video serisi “1 Dakikada Gerçek”</li><li>Günlük infografik ordusu</li><li>Eşzamanlı hashtag fırtınaları (#ŞeffaflıkŞart)</li><li>Sansür delme protokolü (5 platformda eşzamanlı)</li><li>VPN ve merkeziyetsiz sosyal ağ altyapısı</li><li>Provokasyonsuz, şiddetsiz disiplin</li><li>Algoritmayı tersine mühendislik ile aşma</li></ol>`
         },
-        // 6. modül olarak donusum kalıyor, ama 7 ve 8 için mevcutDurum ve altincag'ı ekliyorum, sonra donusum 9. olacak
+        "donusum": {
+            baslik: "🏛️ 6. YÖNETİMDE YAPISAL DÖNÜŞÜM",
+            icerik: `<h1>12 DÖNÜŞÜM ADIMI</h1><ol><li>Tepeden inme piramit ters çevrilecek; tabandan seçim ve karar, uygulama yönetim kurulundan</li><li>Köylü Odaları: aracısız satış</li><li>Esnaf Meclisleri: faizsiz kredi havuzları</li><li>Gençlik Teknoloji Odaları: blockchain liyakat</li><li>Üretici verileri anlık dashboard'da şeffaf</li><li>Kamu bankaları faizsiz mikro kredi sunacak</li><li>Kooperatif lojistik ağları kurulacak</li><li>Her mahallede dijital oylama sistemi</li><li>Merkezi hükümet sadece koordinasyon yapacak</li><li>Yerel meclisler bütçeyi doğrudan yönetecek</li><li>Yolsuzluk blockchain ile izlenecek</li><li>Yeni anayasa, toplumsal sözleşme halk oylamasıyla kabul edilecek</li></ol>`
+        },
         "mevcutDurum": {
             baslik: "📉 7. MEVCUT EKONOMİK VE SİYASİ DURUM",
             icerik: `<h1>12 GERÇEK TABLO</h1><ol><li>Yıllık enflasyon resmi rakamların çok üzerinde, alım gücü eridi.</li><li>İşsizlik özellikle gençlerde %25’i aştı, beyin göçü hızlandı.</li><li>Döviz kurları ve faizler kontrol edilemiyor, ekonomik güven yok.</li><li>Kamu borcu ve bütçe açığı tarihi zirvede, vergi yükü arttı.</li><li>Adalet ve hukukun üstünlüğü zayıfladı, yargı bağımsızlığı tartışmalı.</li><li>Siyasi kutuplaşma toplumsal barışı tehdit ediyor, diyalog kanalları kapalı.</li><li>Medya ve ifade özgürlüğü baskı altında, muhalif sesler susturuluyor.</li><li>Deprem bölgesinde ihmal ve yolsuzluk ortaya çıktı, afet yönetimi çöktü.</li><li>Yolsuzluk ve kayırmacılık kamuda kurumsallaşmış durumda.</li><li>Göçmen krizi ve güvenlik sorunları toplumsal huzursuzluğu artırıyor.</li><li>Eğitim sistemi çökmüş, liyakat yerine ideoloji hâkim.</li><li>Dış politika yalnızlaştırıldı, uluslararası güven kalmadı.</li></ol><div class="highlight">“Bu tablo kader değildir. Değişim için örgütlenme şarttır.”</div>`
@@ -398,24 +401,20 @@
             baslik: "🌟 8. TÜRKİYE'NİN ALTINÇAĞ VİZYONU",
             icerik: `<h1>12 ALTINÇAĞ MADDESİ</h1><ol><li>Ekonomide %70 enflasyon %5'e düşecek, istikrar sağlanacak.</li><li>Tam istihdam, genç işsizlik sıfırlanacak, herkes iş ve aş sahibi.</li><li>Şeffaf ve denetlenebilir kamu maliyesi, yolsuzluk tarih olacak.</li><li>Bağımsız yargı, hukukun üstünlüğü ve adalete erişim herkes için.</li><li>Demokratik katılım, ifade özgürlüğü ve çoğulcu medya düzeni.</li><li>Yerel yönetimler güçlendirilecek, halk bütçesini yönetecek.</li><li>Bilim ve teknolojide atılım, liyakata dayalı eğitim sistemi.</li><li>Köylü ve esnaf korunacak, aracılar kaldırılacak, adil ticaret.</li><li>Depreme dayanıklı kentler, afet yönetimi sivil toplumla birlikte.</li><li>Sosyal refah devleti: sağlık, emeklilik, barınma güvence altında.</li><li>Çevreci ve sürdürülebilir kalkınma, yeşil dönüşüm.</li><li>Barışçıl dış politika, bölgesinde saygın lider ülke.</li></ol><div class="highlight">“Altın çağ mümkündür; yeter ki birleşip çalışalım.”</div>`
         },
-        "donusum": {
-            baslik: "🏛️ 9. YÖNETİMDE YAPISAL DÖNÜŞÜM",
-            icerik: `<h1>12 DÖNÜŞÜM ADIMI</h1><ol><li>Tepeden inme piramit ters çevrilecek; tabandan seçim ve karar, uygulama yönetim kurulundan</li><li>Köylü Odaları: aracısız satış</li><li>Esnaf Meclisleri: faizsiz kredi havuzları</li><li>Gençlik Teknoloji Odaları: blockchain liyakat</li><li>Üretici verileri anlık dashboard'da şeffaf</li><li>Kamu bankaları faizsiz mikro kredi sunacak</li><li>Kooperatif lojistik ağları kurulacak</li><li>Her mahallede dijital oylama sistemi</li><li>Merkezi hükümet sadece koordinasyon yapacak</li><li>Yerel meclisler bütçeyi doğrudan yönetecek</li><li>Yolsuzluk blockchain ile izlenecek</li><li>Yeni anayasa, toplumsal sözleşme halk oylamasıyla kabul edilecek</li></ol>`
-        },
         "ai": {
-            baslik: "🤖 10. YAPAY ZEKA ASİSTANI",
+            baslik: "🤖 9. YAPAY ZEKA ASİSTANI",
             icerik: `<h1>12 SORU / 12 CEVAP</h1><ol><li><strong>Enflasyon neden çözülmüyor?</strong> – İsraf ve rant düzeni yüzünden. Yeni sistem üretici odalarıyla fiyatları denetleyecek.</li><li><strong>Torpil nasıl bitecek?</strong> – Blockchain liyakat puanı ile her atama şeffaf.</li><li><strong>Nasıl örgütlenebilirim?</strong> – Mahalle hücresi kur, komşularınla takas havuzu oluştur.</li><li><strong>Korkuyorum, ne yapmalıyım?</strong> – Yalnız olmadığını bil. Manifestoyu oku, bir kişiye anlat.</li><li><strong>Gençler neden evlenmiyor?</strong> – Gelecek güvencesi yok. Liyakat sistemi ve mikro kredilerle evlilik teşvik edilecek.</li><li><strong>Emekliler ne kazanacak?</strong> – Refah içinde yaşama hakkı, sağlık ve sosyal destek.</li><li><strong>Köylü nasıl kurtulacak?</strong> – Köylü Odaları aracıları kaldıracak, ürün fiyatını kendisi belirleyecek.</li><li><strong>Esnaf nasıl ayakta kalacak?</strong> – Faizsiz mikro kredi havuzları ve dayanışma takas ağları.</li><li><strong>Şiddetsiz direniş işe yarar mı?</strong> – Tarihte birçok örnek var. Vergi takibi ve ifşa baskıyı eritir.</li><li><strong>Yeni piramit nedir?</strong> – Tepedekiler hizmetkâr, tabandaki üreticiler sahiptir.</li><li><strong>Dijital dashboard ne işe yarar?</strong> – Anlık veri akışı, şeffaflık ve organize olma merkezi.</li><li><strong>Bu manifestoyu kim hazırladı?</strong> – Milletin vicdanı, matematik ve gelecek bilimi. Sen de katkı sunabilirsin.</li></ol><div><textarea id="aiSoru" rows="2" placeholder="Kendi sorunuzu yazın..." style="width:100%"></textarea><button id="aiSorBtn">Asistan'a Sor</button><div id="aiCevap" class="highlight"></div></div>`
         },
         "fon": {
-            baslik: "💰 11. DAYANIŞMA VE KALKINMA FONU",
-            icerik: `<h1>12 FON KULLANIM İLKESİ</h1><ol><li>Halkın kendi kaynağını yaratması</li><li>Mikro kredi faizsiz dağıtılır</li><li>Acil yardım ve iaşe desteği</li><li>Köylüye tohum ve ekipman</li><li>Esnafa düşük maliyetli finansman</li><li>Öğrencilere Burs, Gençlere girişimcilere hibe</li><li>Deprem, sel gibi afetlerde anında müdahale</li><li>Eğitim ve dijital okuryazarlık kursları</li><li>Kadın kooperatiflerine destek</li><li>Engelli bireyler için fon ayrılması</li><li>Fon kullanımı blockchain ile şeffaf</li><li>Her bağışçı, fonun harcandığı yeri görebilir</li></ol><div id="fonTutar" style="font-size:2rem; font-weight:bold; margin:1rem 0;">0 TL</div><button data-miktar="100">100 TL Bağış</button><button data-miktar="500">500 TL Bağış</button><button data-miktar="1000">1000 TL Bağış</button><button data-miktar="5000">5000 TL Bağış</button>`
+            baslik: "💰 10. DAYANIŞMA VE KALKINMA FONU",
+            icerik: `<h1>12 FON KULLANIM İLKESİ</h1><ol><li>Halkın kendi kaynağını yaratması</li><li>Mikro kredi faizsiz dağıtılır</li><li>Acil yardım ve iaşe desteği</li><li>Köylüye tohum ve ekipman</li><li>Esnafa düşük maliyetli finansman</li><li>Öğrencilere Burs, Gençlere girişimcilere hibe</li><li>Deprem, sel gibi afetlerde anında müdahale</li><li>Eğitim ve dijital okuryazarlık kursları</li><li>Kadın kooperatiflerine destek</li><li>Engelli bireyler için fon ayrılması</li><li>Fon kullanımı blockchain ile şeffaf</li><li>Her bağışçı, fonun harcandığı yeri görebilir</li></ol><div id="fonTutar" style="font-size:2rem; font-weight:bold; margin:1rem 0;">0 TL</div><button data-miktar="100">100 TL Bağış</button><button data-miktar="500">500 TL Bağış</button><button data-miktar="1000">1000 TL Bağış</button><button data-miktar="2500">2500 TL Bağış</button>`
         },
         "abonelik": {
-            baslik: "📦 12. ABONELİK PAKETLERİ (5 SEÇENEK)",
+            baslik: "📦 11. ABONELİK PAKETLERİ (5 SEÇENEK)",
             icerik: `<h1>DESTEK PAKETLERİ</h1><div class="paket-grid" id="paketGrid"></div><p>Her paket WhatsApp üzerinden satın alınabilir. Tüm gelir dayanışma fonuna aktarılır.</p>`
         },
         "duyurular": {
-            baslik: "📢 13. DUYURU PANOSU",
+            baslik: "📢 12. DUYURU PANOSU",
             icerik: `<h1>DUYURULAR</h1><div id="duyuruListesi">Duyurular yükleniyor...</div><div id="adminDuyuruPanel" style="display:none; margin-top:2rem;"><input type="text" id="duyuruBaslik" placeholder="Duyuru başlığı" style="width:100%; margin-bottom:8px;"><textarea id="duyuruIcerik" rows="2" placeholder="Duyuru içeriği"></textarea><button id="duyuruEkle">Duyuru Ekle</button><div id="duyuruSilListe" style="margin-top:1rem;"></div></div>`
         }
     };
